@@ -68,7 +68,7 @@ module Sunspot
           pid = fork do
             Process.setsid
             STDIN.reopen('/dev/null')
-            STDOUT.reopen('/dev/null', 'a')
+            STDOUT.reopen('/dev/null')
             STDERR.reopen(STDOUT)
             run
           end
